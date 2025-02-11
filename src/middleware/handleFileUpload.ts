@@ -5,8 +5,11 @@ export const handleFileUpload = (req: Request, res: Response, next: NextFunction
 	upload.single("video")(req, res, (err: any) => {
 		if (err) {
 			res.status(400).json({ error: err.message });
-			return next(err);
+			// please do not ask why
+			setTimeout(() => next(err), 15);
+			return;
 		}
+
 		next();
 	});
 };

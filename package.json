@@ -6,7 +6,8 @@
 	"scripts": {
 		"start:dev": "cross-env NODE_ENV=development tsx watch ./src/app.ts",
 		"start:prod": "cross-env NODE_ENV=production PORT=3000 node ./dist/app.js",
-		"build:prod": "tsc"
+		"build:prod": "tsc",
+		"pm2:start:prod": "cross-env NODE_ENV=production PORT=80 pm2 start ./dist/app.js --name express-converter"
 	},
 	"engines": {
 		"node": ">=22.x"
