@@ -8,6 +8,9 @@
 		"start:prod": "cross-env NODE_ENV=production PORT=3000 node ./dist/app.js",
 		"build:prod": "tsc"
 	},
+	"engines": {
+		"node": ">=22.x"
+	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
@@ -33,5 +36,8 @@
 		"@types/swagger-ui-express": "^4.1.7",
 		"tsx": "^4.19.2",
 		"typescript": "^5.7.3"
+	},
+	"resolutions": {
+		"esbuild": "^0.25.0"
 	}
 }

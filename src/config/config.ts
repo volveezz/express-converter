@@ -4,8 +4,8 @@ export const MAX_THREADS = os.cpus().length - 1;
 
 // export const MAX_THREADS = 2;
 
-// 2 gb
-export const MAX_FILE_SIZE = 99999999999; //2 * 1024 * 1024 * 1024;
+// 4 gb
+export const MAX_FILE_SIZE = 4 * 1024 * 1024 * 1024;
 
 export const UPLOAD_DIR = "uploads";
 
