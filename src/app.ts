@@ -39,7 +39,7 @@ class VideoConverterServer {
 
 		const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
-		this.app.use("/api/v1/swagger", swaggerUi.serve, swaggerUi.setup(swaggerSpec, { customJs: "/swagger.js" }));
+		this.app.use("/api/v1/swagger", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 		this.app.get("/api/v1/swagger.json", (req, res) => {
 			res.json(swaggerSpec);
 		});

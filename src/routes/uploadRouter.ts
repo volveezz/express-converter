@@ -1,6 +1,6 @@
 import express from "express";
+import upload from "src/middleware/fileUpload.js";
 import { uploadController } from "../controllers/uploadController.js";
-import { handleFileUpload } from "../middleware/handleFileUpload.js";
 
 const router = express.Router();
 
@@ -50,6 +50,6 @@ const router = express.Router();
  *                 error:
  *                   type: string
  */
-router.post("/", handleFileUpload, uploadController);
+router.post("/", upload, uploadController);
 
 export default router;

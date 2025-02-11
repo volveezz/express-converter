@@ -31,7 +31,7 @@ const fileFilter = (req: Request, file: Express.Multer.File, callback: FileFilte
 	if (isAllowed) {
 		callback(null, isAllowed);
 	} else {
-		callback(new Error("Only .mov files are allowed."));
+		callback(null, false);
 	}
 };
 
@@ -42,6 +42,6 @@ const upload = multer({
 	// Comment the line below if the limit is unnecessary
 	// but it is really slow to process large files
 	limits: { fileSize: MAX_FILE_SIZE },
-});
+}).single("video");
 
 export default upload;
