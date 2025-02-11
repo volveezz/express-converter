@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import path from "path";
-import { MAX_FILE_SIZE } from "src/config/config.js";
+import { MAX_FILE_SIZE } from "../config/config.js";
 import { processFile } from "../services/convertService.js";
 import { workerManager } from "../workers/workerManager.js";
 
